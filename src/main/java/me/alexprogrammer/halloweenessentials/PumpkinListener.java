@@ -27,7 +27,11 @@ public class PumpkinListener implements Listener {
 
         if (event.getAction() == Action.LEFT_CLICK_BLOCK || event.getAction() == Action.RIGHT_CLICK_BLOCK || event.getAction() == Action.LEFT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_AIR) {
             if (player.getInventory().getItemInMainHand().getType() == Material.PUMPKIN) {
-                player.getInventory().setItemInMainHand(null);
+                if (player.getInventory().getItemInMainHand().getAmount() == 1) {
+                    player.getInventory().setItemInMainHand(null);
+                } else {
+                    player.getInventory().getItemInMainHand().setAmount(player.getInventory().getItemInMainHand().getAmount() - 1);
+                }
 
                 player.sendMessage("Here is a small surprise for you: ");
 
