@@ -37,7 +37,7 @@ public class PumpkinListener implements Listener {
     }
 
     private void getSurprise(Player player) {
-        int randomNum = ThreadLocalRandom.current().nextInt(1, 11 + 1);
+        int randomNum = ThreadLocalRandom.current().nextInt(1, 12 + 1);
         ItemStack surprise;
         ItemMeta meta;
 
