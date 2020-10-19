@@ -1,0 +1,5 @@
+name: HalloweenEssentials
+version: ${project.version}
+main: me.alexprogrammer.halloweenessentials.HalloweenEssentials
+authors: [ AlexProgrammerDE ]
+description: Funny halloween plugin for 10b10t.org
