@@ -40,7 +40,7 @@ public class PumpkinListener implements Listener {
     }
 
     private void getSurprise(Player player) {
-        int randomNum = ThreadLocalRandom.current().nextInt(1, 20 + 1);
+        int randomNum = ThreadLocalRandom.current().nextInt(1, 24 + 1);
         ItemStack surprise;
         ItemMeta meta;
 
@@ -192,6 +192,7 @@ public class PumpkinListener implements Listener {
                 surprise.setItemMeta(meta);
                 player.getWorld().dropItemNaturally(player.getLocation(), surprise);
                 player.sendMessage("Witch hat! ;)");
+
                 break;
             case 22:
                 surprise = new ItemStack(Material.IRON_HELMET, 1);
@@ -200,6 +201,7 @@ public class PumpkinListener implements Listener {
                 surprise.setItemMeta(meta);
                 player.getWorld().dropItemNaturally(player.getLocation(), surprise);
                 player.sendMessage("Dracula hat! ;)");
+
                 break;
             case 23:
                 surprise = new ItemStack(Material.GOLD_HELMET, 1);
@@ -208,6 +210,7 @@ public class PumpkinListener implements Listener {
                 surprise.setItemMeta(meta);
                 player.getWorld().dropItemNaturally(player.getLocation(), surprise);
                 player.sendMessage("Mummy hat! ;)");
+
                 break;
             case 24:
                 surprise = new ItemStack(Material.DIAMOND_HELMET, 1);
@@ -216,6 +219,7 @@ public class PumpkinListener implements Listener {
                 surprise.setItemMeta(meta);
                 player.getWorld().dropItemNaturally(player.getLocation(), surprise);
                 player.sendMessage("Pumpkin hat! ;)");
+
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + randomNum);
