@@ -5,13 +5,24 @@ A halloween plugin for 10b10t.org.
 Funny things happen when right/left clicking with a pumpkin in your hand.
 
 ## Funny things
-* Potion effects
+* Levitation
+* Slow effect
+* Speed effect
+* Jump boost
+* Glowing
+* Fire resistance
 * Funny messages
 * Lightning
 * Change weather
-* Spawn tnt
+* Primed tnt
 * Crystals
 * Gapples
-
-## TODO
-* Spawn mobs like withes or friends mobs
+* Shulkers
+* Totems
+* Friend wolfs
+* Witches
+* Blazes
+* Skeletons
+* Zombies
+* Jokes noone gets
+* Get special textured heads
