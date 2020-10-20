@@ -24,5 +24,6 @@ Funny things happen when right/left clicking with a pumpkin in your hand.
 * Blazes
 * Skeletons
 * Zombies
+* Change weather
 * Jokes noone gets
 * Get special textured heads
