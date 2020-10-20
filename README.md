@@ -16,8 +16,8 @@ Funny things happen when right/left clicking with a pumpkin in your hand.
 * Change weather
 * Primed tnt
 * Crystals
-* Gapples
-* Shulkers
+* Enchanted golden apples
+* Shulkers (Filled with delicious cookies)
 * Totems
 * Friend wolfs
 * Witches
@@ -25,5 +25,6 @@ Funny things happen when right/left clicking with a pumpkin in your hand.
 * Skeletons
 * Zombies
 * Change weather
-* Jokes noone gets
+* Jokes no one gets
 * Get special textured heads
+* Get a tasty cookie

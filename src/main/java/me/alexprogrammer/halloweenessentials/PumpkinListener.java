@@ -1,12 +1,16 @@
 package me.alexprogrammer.halloweenessentials;
 
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.block.ShulkerBox;
 import org.bukkit.entity.*;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.BlockStateMeta;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -40,7 +44,7 @@ public class PumpkinListener implements Listener {
     }
 
     private void getSurprise(Player player) {
-        int randomNum = ThreadLocalRandom.current().nextInt(1, 24 + 1);
+        int randomNum = ThreadLocalRandom.current().nextInt(1, 25 + 1);
         ItemStack surprise;
         ItemMeta meta;
 
@@ -51,7 +55,7 @@ public class PumpkinListener implements Listener {
                 meta.setDisplayName("Chocolate bars");
                 surprise.setItemMeta(meta);
                 player.getWorld().dropItemNaturally(player.getLocation(), surprise);
-                player.sendMessage("Chocolate bars! ;)");
+                player.sendMessage(ChatColor.GOLD + "Chocolate bars! ;)");
 
                 break;
             case 2:
@@ -60,59 +64,59 @@ public class PumpkinListener implements Listener {
                 meta.setDisplayName("Yellow candy");
                 surprise.setItemMeta(meta);
                 player.getWorld().dropItemNaturally(player.getLocation(), surprise);
-                player.sendMessage("Yellow candy! ;)");
+                player.sendMessage(ChatColor.GOLD + "Yellow candy! ;)");
 
                 break;
             case 3:
                 player.getWorld().spawnEntity(player.getLocation(), EntityType.PRIMED_TNT);
                 player.getWorld().spawnEntity(player.getLocation(), EntityType.PRIMED_TNT);
                 player.getWorld().spawnEntity(player.getLocation(), EntityType.PRIMED_TNT);
-                player.sendMessage("Zzzzzzzzzzzz! ;)");
+                player.sendMessage(ChatColor.GOLD + "Zzzzzzzzzzzz! ;)");
 
                 break;
             case 4:
                 player.getWorld().spigot().strikeLightning(player.getLocation(), false);
-                player.sendMessage("Zeus hates you! ;)");
+                player.sendMessage(ChatColor.GOLD + "Zeus hates you! ;)");
 
                 break;
             case 5:
                 player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 10 * 20, 3, true, true));
-                player.sendMessage("Your on speed now! ;)");
+                player.sendMessage(ChatColor.GOLD + "Your on speed now! ;)");
 
                 break;
             case 6:
                 player.addPotionEffect(new PotionEffect(PotionEffectType.LEVITATION, 3 * 20, 3, true, true));
-                player.sendMessage("Red bull! ;)");
+                player.sendMessage(ChatColor.GOLD + "Red bull! ;)");
 
                 break;
             case 7:
                 player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 10 * 20, 3, true, true));
-                player.sendMessage("RIP speed! ;)");
+                player.sendMessage(ChatColor.GOLD + "RIP speed! ;)");
 
                 break;
             case 8:
                 player.addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, 10 * 20, 3, true, true));
-                player.sendMessage("Your a disco ball now! ;)");
+                player.sendMessage(ChatColor.GOLD + "Your a disco ball now! ;)");
 
                 break;
             case 9:
                 player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 10 * 20, 3, true, true));
-                player.sendMessage("Kangaroo! ;)");
+                player.sendMessage(ChatColor.GOLD + "Kangaroo! ;)");
 
                 break;
             case 10:
                 player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, 10 * 20, 3, true, true));
-                player.sendMessage("Your the devil now! ;)");
+                player.sendMessage(ChatColor.GOLD + "Your the devil now! ;)");
 
                 break;
             case 11:
                 player.getWorld().setThundering(!player.getWorld().isThundering());
-                player.sendMessage("Maybe a thunder will catch you! ;)");
+                player.sendMessage(ChatColor.GOLD + "Maybe a thunder will catch you! ;)");
 
                 break;
             case 12:
                 player.getWorld().setStorm(!player.getWorld().hasStorm());
-                player.sendMessage("uwu halloween + storm! ;)");
+                player.sendMessage(ChatColor.GOLD + "uwu halloween + storm! ;)");
 
                 break;
             case 13:
@@ -121,7 +125,7 @@ public class PumpkinListener implements Listener {
                 witch.setCustomName("Hermione");
                 witch.setCustomNameVisible(true);
 
-                player.sendMessage("Did you read harry potter yet? ;)");
+                player.sendMessage(ChatColor.GOLD + "Did you read harry potter yet? ;)");
 
                 break;
             case 14:
@@ -130,7 +134,7 @@ public class PumpkinListener implements Listener {
                 skeleton.setCustomName("Spooky scary skeleton");
                 skeleton.setCustomNameVisible(true);
 
-                player.sendMessage("U know this song? ;)");
+                player.sendMessage(ChatColor.GOLD + "U know this song? ;)");
 
                 break;
             case 15:
@@ -139,7 +143,7 @@ public class PumpkinListener implements Listener {
                 zombie.setCustomName("Frankenstein's Monster");
                 zombie.setCustomNameVisible(true);
 
-                player.sendMessage("Did you know most people think its real name is Frankenstein? ;)");
+                player.sendMessage(ChatColor.GOLD + "Did you know most people think its real name is Frankenstein? ;)");
 
                 break;
             case 16:
@@ -149,13 +153,13 @@ public class PumpkinListener implements Listener {
                 wolf.setCustomNameVisible(true);
                 wolf.setOwner(player);
 
-                player.sendMessage("You may need a friend for this spooky time! ;)");
+                player.sendMessage(ChatColor.GOLD + "You may need a friend for this spooky time! ;)");
 
                 break;
             case 17:
                 player.giveExpLevels(1);
 
-                player.sendMessage("Here is some green candy! ;)");
+                player.sendMessage(ChatColor.GOLD + "Here is some green candy! ;)");
 
                 break;
             case 18:
@@ -164,16 +168,35 @@ public class PumpkinListener implements Listener {
                 meta.setDisplayName("Voodoo doll");
                 surprise.setItemMeta(meta);
                 player.getWorld().dropItemNaturally(player.getLocation(), surprise);
-                player.sendMessage("Voodoo doll! ;)");
+                player.sendMessage(ChatColor.GOLD + "Voodoo doll! ;)");
 
                 break;
             case 19:
+                ItemStack cookie = new ItemStack(Material.COOKIE);
+                ItemMeta cookieMeta = cookie.getItemMeta();
+                cookieMeta.setDisplayName("Delicious cookie");
+                cookie.setItemMeta(cookieMeta);
+
                 surprise = new ItemStack(Material.BLACK_SHULKER_BOX, 1);
-                meta = surprise.getItemMeta();
-                meta.setDisplayName("Candy bag");
-                surprise.setItemMeta(meta);
+
+                BlockStateMeta shulkerMeta = (BlockStateMeta) surprise.getItemMeta();
+                ShulkerBox box = (ShulkerBox) shulkerMeta.getBlockState();
+                Inventory inventory = box.getInventory();
+
+                shulkerMeta.setDisplayName("Candy bag");
+
+                for (int i = 0; i < 27; i++) {
+                    inventory.setItem(i, cookie.clone());
+                }
+
+                box.update();
+
+                shulkerMeta.setBlockState(box);
+
+                surprise.setItemMeta(shulkerMeta);
+
                 player.getWorld().dropItemNaturally(player.getLocation(), surprise);
-                player.sendMessage("Candy bag! ;)");
+                player.sendMessage(ChatColor.GOLD + "Candy bag! ;)");
 
                 break;
             case 20:
@@ -182,7 +205,7 @@ public class PumpkinListener implements Listener {
                 blaze.setCustomName("Devils slave");
                 blaze.setCustomNameVisible(true);
 
-                player.sendMessage("Directly from the hell! ;)");
+                player.sendMessage(ChatColor.GOLD + "Directly from the hell! ;)");
 
                 break;
             case 21:
@@ -191,7 +214,7 @@ public class PumpkinListener implements Listener {
                 meta.setDisplayName("Witch hat");
                 surprise.setItemMeta(meta);
                 player.getWorld().dropItemNaturally(player.getLocation(), surprise);
-                player.sendMessage("Witch hat! ;)");
+                player.sendMessage(ChatColor.GOLD + "Witch hat! ;)");
 
                 break;
             case 22:
@@ -200,7 +223,7 @@ public class PumpkinListener implements Listener {
                 meta.setDisplayName("Dracula hat");
                 surprise.setItemMeta(meta);
                 player.getWorld().dropItemNaturally(player.getLocation(), surprise);
-                player.sendMessage("Dracula hat! ;)");
+                player.sendMessage(ChatColor.GOLD + "Dracula hat! ;)");
 
                 break;
             case 23:
@@ -209,7 +232,7 @@ public class PumpkinListener implements Listener {
                 meta.setDisplayName("Mummy hat");
                 surprise.setItemMeta(meta);
                 player.getWorld().dropItemNaturally(player.getLocation(), surprise);
-                player.sendMessage("Mummy hat! ;)");
+                player.sendMessage(ChatColor.GOLD + "Mummy hat! ;)");
 
                 break;
             case 24:
@@ -218,7 +241,16 @@ public class PumpkinListener implements Listener {
                 meta.setDisplayName("Pumpkin hat");
                 surprise.setItemMeta(meta);
                 player.getWorld().dropItemNaturally(player.getLocation(), surprise);
-                player.sendMessage("Pumpkin hat! ;)");
+                player.sendMessage(ChatColor.GOLD + "Pumpkin hat! ;)");
+
+                break;
+            case 25:
+                surprise = new ItemStack(Material.COOKIE, 1);
+                meta = surprise.getItemMeta();
+                meta.setDisplayName("Tasty cookie");
+                surprise.setItemMeta(meta);
+                player.getWorld().dropItemNaturally(player.getLocation(), surprise);
+                player.sendMessage(ChatColor.GOLD + "Tasty cookie! ;)");
 
                 break;
             default:
